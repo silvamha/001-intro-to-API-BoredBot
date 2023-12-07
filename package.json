@@ -1,5 +1,15 @@
 {
   "dependencies": {
     "firebase": "^10.7.1"
-  }
+  },
+  "name": "001-intro-to-api-boredbot",
+  "description": "Test Database",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
