@@ -1,11 +1,11 @@
-// Import Firebase from the CDN
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+// Initialize Cloud Firestore through Firebase
+import { initializeApp } from "firebase/app";
 
-// If you enabled Analytics in your project, add the Firebase SDK for Google Log In
 import {
   getAuth,
   onAuthStateChanged,  
-} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+} from "firebase/auth";
+
 
 import {
   getFirestore,
@@ -15,7 +15,7 @@ import {
   onSnapshot,
   doc,
   setDoc,
-} from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
+} from "firebase/firestore";
 
 // Firebase configuration
 const firebaseConfig = {
@@ -31,7 +31,6 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
-
 
 async function addCityWithGeneratedId(city) {
   const citiesCol = collection(db, "cities");
@@ -54,7 +53,7 @@ async function addCityWithId(cityId, city) {
   }
 }
 
-addCityWithId("newCityId", { name: "Sao Paulo", population: 1000000, country: "Country" });
+addCityWithId("newCityId", { name: "Rio de Janeiro", population: 2500000, country: "Country" });
 
 function listenForCityUpdates(cityId) {
   const cityRef = doc(db, "cities", cityId);
@@ -72,3 +71,10 @@ function listenForCityUpdates(cityId) {
 
 listenForCityUpdates("newCityId");
 
+function iterateObject(obj){
+  for (let key in obj){
+    console.log(`Key:, ${key}, Value:, ${obj[key]}`)
+  }
+}
+
+iterateObject(db)
