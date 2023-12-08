@@ -20,7 +20,7 @@ import {
 // Firebase configuration
 const firebaseConfig = {
   // your configuration
-  apiKey: "AIzaSyA-GR-RKh2Pt_GIH3ZhUw1x62aYkNDzBnE",
+  apiKey: "AIzaSyBQH1IICRcR5y_nD_iC6eZRlZMbmuQt9LI",
   authDomain: "my-first-firestore-db-4f59b.firebaseapp.com",
   projectId: "my-first-firestore-db-4f59b",
   storageBucket: "my-first-firestore-db-4f59b.appspot.com",
@@ -53,7 +53,7 @@ async function addCityWithId(cityId, city) {
   }
 }
 
-addCityWithId("newCityId", { name: "Rio de Janeiro", population: 2500000, country: "Country" });
+addCityWithId("newCityId", { name: "Flordiablanca", population: 12350, country: "Country" });
 
 function listenForCityUpdates(cityId) {
   const cityRef = doc(db, "cities", cityId);
@@ -78,3 +78,7 @@ function iterateObject(obj){
 }
 
 iterateObject(db)
+
+
+console.log('I want to live in Savannah')
+console.log('Changed API key')
