@@ -139,6 +139,5 @@ const data = [
   }
 ];
 
-for (let key in obj) {
-  console.log(key);
-}
+console.log('hello 1234')
+iterateObject(data)
